@@ -1,0 +1,125 @@
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Site de Cores
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-900 text-white">
+  <div class="min-h-screen flex items-center justify-center">
+   <div class="bg-purple-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+    <h1 class="text-3xl font-bold mb-6 text-center">
+     Login
+    </h1>
+    <form id="loginForm">
+     <div class="mb-4">
+      <label class="block text-sm font-medium" for="username">
+       Usuário
+      </label>
+      <input class="mt-1 p-2 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500" id="username" type="text"/>
+     </div>
+     <div class="mb-6">
+      <label class="block text-sm font-medium" for="password">
+       Senha
+      </label>
+      <input class="mt-1 p-2 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500" id="password" type="password"/>
+     </div>
+     <button class="w-full py-2 bg-purple-600 hover:bg-purple-700 rounded text-white font-bold" type="submit">
+      Entrar
+     </button>
+    </form>
+   </div>
+  </div>
+  <div class="hidden min-h-screen flex flex-col items-center justify-center" id="colorTable">
+   <h1 class="text-4xl font-bold mb-8">
+    Tabela de Cores
+   </h1>
+   <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="color-box bg-red-500 p-4 rounded-lg cursor-pointer" data-color="#f56565">
+     <img alt="Quadrado vermelho com texto 'Red'" class="w-full h-full object-cover rounded-lg" height="100" src="https://storage.googleapis.com/a1aa/image/nTnNp26Cwx8NRSQZog_Zs-mOxDkJvDzlvPaK7JyB_Cs.jpg" width="100"/>
+    </div>
+    <div class="color-box bg-green-500 p-4 rounded-lg cursor-pointer" data-color="#48bb78">
+     <img alt="Quadrado verde com texto 'Green'" class="w-full h-full object-cover rounded-lg" height="100" src="https://storage.googleapis.com/a1aa/image/MQeI0anYhafhF4G7Si4WeEs-Ph6dGf7xbYlYF3QC9kg.jpg" width="100"/>
+    </div>
+    <div class="color-box bg-blue-500 p-4 rounded-lg cursor-pointer" data-color="#4299e1">
+     <img alt="Quadrado azul com texto 'Blue'" class="w-full h-full object-cover rounded-lg" height="100" src="https://storage.googleapis.com/a1aa/image/ZnIBE2ZHQI5d9ZyqyOQUFZkXWeUYtrl-fgQ8RgmM3VM.jpg" width="100"/>
+    </div>
+    <div class="color-box bg-yellow-500 p-4 rounded-lg cursor-pointer" data-color="#ecc94b">
+     <img alt="Quadrado amarelo com texto 'Yellow'" class="w-full h-full object-cover rounded-lg" height="100" src="https://storage.googleapis.com/a1aa/image/qgVf2Aa7km2AOvW-WZsB1j_LgPynuGhaDGGlj5KgDUs.jpg" width="100"/>
+    </div>
+    <div class="color-box bg-purple-500 p-4 rounded-lg cursor-pointer" data-color="#9f7aea">
+     <img alt="Quadrado roxo com texto 'Purple'" class="w-full h-full object-cover rounded-lg" height="100" src="https://storage.googleapis.com/a1aa/image/peB-eXOJy0gWKivT4mhSsRIc6yFkNeif5CJdnlWpab0.jpg" width="100"/>
+    </div>
+    <div class="color-box bg-pink-500 p-4 rounded-lg cursor-pointer" data-color="#ed64a6">
+     <img alt="Quadrado rosa com texto 'Pink'" class="w-full h-full object-cover rounded-lg" height="100" src="https://storage.googleapis.com/a1aa/image/2YcjNpvej7Vw1tSbcu7rgTBxuOCecTEOCn4K6Z9A-lY.jpg" width="100"/>
+    </div>
+    <div class="color-box bg-teal-500 p-4 rounded-lg cursor-pointer" data-color="#38b2ac">
+     <img alt="Quadrado verde-azulado com texto 'Teal'" class="w-full h-full object-cover rounded-lg" height="100" src="https://storage.googleapis.com/a1aa/image/p2qsOu1yvS3PnRrZgs0JaXIgnzctO93ikhX1MIJD3TU.jpg" width="100"/>
+    </div>
+    <div class="color-box bg-indigo-500 p-4 rounded-lg cursor-pointer" data-color="#667eea">
+     <img alt="Quadrado índigo com texto 'Indigo'" class="w-full h-full object-cover rounded-lg" height="100" src="https://storage.googleapis.com/a1aa/image/CmNF9oQ-TUk-OdFRPbY04qXLEmRrkil8uZBz07ijAJI.jpg" width="100"/>
+    </div>
+   </div>
+   <h2 class="text-3xl font-bold mt-12 mb-6">
+    Criar Gradiente
+   </h2>
+   <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-lg">
+    <div class="mb-4">
+     <label class="block text-sm font-medium" for="color1">
+      Cor 1
+     </label>
+     <input class="mt-1 p-2 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500" id="color1" type="color"/>
+    </div>
+    <div class="mb-4">
+     <label class="block text-sm font-medium" for="color2">
+      Cor 2
+     </label>
+     <input class="mt-1 p-2 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500" id="color2" type="color"/>
+    </div>
+    <button class="w-full py-2 bg-purple-600 hover:bg-purple-700 rounded text-white font-bold" id="generateGradient" type="button">
+     Gerar Gradiente
+    </button>
+    <div class="mt-6">
+     <h3 class="text-xl font-bold mb-2">
+      Gradiente Gerado
+     </h3>
+     <div class="w-full h-24 rounded-lg" id="gradientPreview">
+     </div>
+     <p class="mt-2 text-sm" id="gradientCode">
+     </p>
+    </div>
+   </div>
+  </div>
+  <script>
+   document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.querySelector('div.min-h-screen').classList.add('hidden');
+            document.getElementById('colorTable').classList.remove('hidden');
+        });
+
+        document.querySelectorAll('.color-box').forEach(box => {
+            box.addEventListener('click', function() {
+                alert('Código da cor: ' + this.getAttribute('data-color'));
+            });
+        });
+
+        document.getElementById('generateGradient').addEventListener('click', function() {
+            const color1 = document.getElementById('color1').value;
+            const color2 = document.getElementById('color2').value;
+            const gradient = `linear-gradient(to right, ${color1}, ${color2})`;
+            document.getElementById('gradientPreview').style.backgroundImage = gradient;
+            document.getElementById('gradientCode').textContent = `background-image: ${gradient};`;
+        });
+  </script>
+ </body>
+</html>
